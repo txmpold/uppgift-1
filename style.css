@@ -1,7 +1,7 @@
 html {
     overflow-x: hidden;
     background-color: black;
-    font-family: Arial,Lucida Sans Unicode,sans-serif;
+    font-family: Roboto,Arial,Lucida Sans Unicode,sans-serif;
 }
 
 body {
@@ -11,15 +11,12 @@ body {
 .toolbar {
     position: fixed;
     top: 0px;
-    width: 100%;
     height: 100px;
     display: flex;
-    box-sizing: border-box;
     width: 100%;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0px;
+/*     justify-content: space-evenly;
+ */    padding: 0px;
     transition: 0.4s;
 }
 
@@ -63,22 +60,31 @@ body {
 /* CONTAINERS */
 
 .left-container {
-    flex-grow: 1;
+    display: flex;
+    height: 100px;
+    flex: 1 1 0;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .nav-link {
-    margin-right: 10px;
     text-decoration: none;
 }
 
 .zara-logo {
-    max-width: 270px;
-    height: auto;
+    height: 47px;
+    width: auto;
+    padding: 0px;
+    margin: 0px;
     filter: invert(1);
 }
 
 .center-container {
-    flex-grow: 1;
+    display: flex;
+    flex: 1 1 0;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
 }
 
 .center-container input {
@@ -86,7 +92,8 @@ body {
     letter-spacing: .02rem;
     font-weight: 700;
     opacity: 100%;
-    font-size: 20px;
+    width: 10rem;
+    font-size: 17px;
     text-transform: uppercase;
     border: transparent;
     border-bottom: 1px solid white;
@@ -99,12 +106,17 @@ body {
 }
 
 .center-container input::placeholder {
-  color: white;
-  opacity: 100%;
+    color: white;
+    opacity: 100%;
 }
 
 .right-container {
-    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 0;
+    height: 100px;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .bi-list {
@@ -113,11 +125,16 @@ body {
 }
 
 .icon {
-    margin-right: 10px;
     text-decoration: none;
-    letter-spacing: .02rem;
     text-transform: uppercase;
+    font-weight: bold;
     color: white;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.logga-in {
+    
 }
 
 /* MAIN */
@@ -143,16 +160,15 @@ main img {
     text-transform: uppercase;
 }
 
-.vincent-container {
-    background-image: url(assets/250710_VVD_FRANCOIS.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
+.img-5 {
+    position: relative;
+    top: 0px;
 }
 
-.vincent-svg {
-    position: relative;
-    padding: 390px 100px;
-    text-align: center;
+.vincent-png {
+    position: absolute;
+    top: 10px;
+    width: 50%;
 }
 
 footer {
