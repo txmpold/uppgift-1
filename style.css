@@ -1,0 +1,175 @@
+html {
+    overflow-x: hidden;
+    background-color: black;
+    font-family: Arial,Lucida Sans Unicode,sans-serif;
+}
+
+body {
+    margin: 0px;
+}
+
+.toolbar {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+    transition: 0.4s;
+}
+
+/* HOVER */
+
+.toolbar:hover {
+    background-color: white;
+    color: black;
+}
+
+.toolbar:hover .search {
+    color: black;
+    border-color: transparent transparent black;
+}
+
+.toolbar:hover h1 {
+    color: black;
+}
+
+.toolbar:hover .bi-list {
+    color: black;
+}
+
+.toolbar:hover .icon {
+    color: black;
+}
+
+.toolbar:hover .search-input {
+    color: black;
+    border-color: black;
+}
+
+.toolbar:hover input::placeholder {
+    color: black;
+}
+
+.toolbar:hover .zara-logo {
+    filter: invert(0);
+}
+
+/* CONTAINERS */
+
+.left-container {
+    flex-grow: 1;
+}
+
+.nav-link {
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.zara-logo {
+    max-width: 270px;
+    height: auto;
+    filter: invert(1);
+}
+
+.center-container {
+    flex-grow: 1;
+}
+
+.center-container input {
+    color: white;
+    letter-spacing: .02rem;
+    font-weight: 700;
+    opacity: 100%;
+    font-size: 20px;
+    text-transform: uppercase;
+    border: transparent;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    user-select: none;
+}
+
+.center-container input:focus {
+    outline: none;
+}
+
+.center-container input::placeholder {
+  color: white;
+  opacity: 100%;
+}
+
+.right-container {
+    flex-grow: 1;
+}
+
+.bi-list {
+    text-decoration: none;
+    color: white;
+}
+
+.icon {
+    margin-right: 10px;
+    text-decoration: none;
+    letter-spacing: .02rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+/* MAIN */
+
+main img {
+    padding: 0px;
+    margin: 0px;
+    width: 100vw;
+}
+
+.scrollspy {
+    position: fixed;
+    bottom: 150px;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+}
+
+.scrollspy a {
+    color: white;
+    text-decoration: none;
+    padding: 0px 10px;
+    text-transform: uppercase;
+}
+
+.vincent-container {
+    background-image: url(assets/250710_VVD_FRANCOIS.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.vincent-svg {
+    position: relative;
+    padding: 390px 100px;
+    text-align: center;
+}
+
+footer {
+    size: 100vh;
+    background-color: white;
+    text-align: center;
+    padding: 100vh;
+}
+
+/* .img-1 {
+    padding: none;
+    margin: none;
+    width: 100%;
+}
+
+.img-2 {
+    padding: none;
+    margin: none;
+    width: 100%;
+} */
