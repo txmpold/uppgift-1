@@ -1,0 +1,6 @@
+Ändringar: 
+Komprimerade bilderna och videon.
+Ändrade fetch-priority på första bilden. 
+Ändrade font-size och la till Aria-lables på knappar för att göra de mer tillgängliga. 
+Minifierade css.
+La till meta description på dokumentet.

@@ -1,21 +1,21 @@
+:root {
+    --fsz-sm: 10px;
+    --fsz-std: 12px;
+    --fsz-lrg: 17px;
+}
+
 html {
     overflow-x: hidden;
     background-color: black;
-    font-family: Roboto,Arial,Lucida Sans Unicode,sans-serif;
-}
-
-body {
-    margin: 0px;
+    font-family: Roboto, Arial, Lucida Sans Unicode, sans-serif;
 }
 
 .toolbar {
     position: fixed;
-    top: 0px;
     height: 100px;
     display: flex;
     width: 100%;
     flex-direction: row;
-    padding: 0px;
     transition: 0.4s;
 }
 
@@ -71,15 +71,66 @@ body {
 }
 
 .bi-list {
-    text-decoration: none;
     color: white;
 }
 
-.zara-logo {
+.nav-item-g1,
+.nav-item-g2,
+.nav-item-g3 a,
+.nav-item-g4 a,
+.nav-item-g5,
+.nav-item-g6 a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: var(--fsz-lrg);
+    color: black;
+    font-weight: bold;
+    letter-spacing: 0.02rem;
+}
+
+.nav-item-sm-g1,
+.nav-item-sm-g2 {
+    display: block;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: var(--fsz-sm);
+}
+
+.nav-item-g1,
+.nav-item-g2,
+.nav-item-g5 {
+    padding: 0px 0px 20px 0px
+}
+
+.nav-item-g3,
+.nav-item-g4,
+.nav-item-g6 {
+    padding: 0px 0px 20px 0px;
+}
+
+.nav-item-sm-g1 {
+    padding: 20px 0px 20px 0px;
+}
+
+.offcanvas-body a {
+    transition: 0.2ms;
+}
+
+.offcanvas-body a:hover {
+    opacity: 50%;
+}
+
+.zara-logo,
+.zara-logo-nav {
     height: 47px;
     width: auto;
     padding: 0px;
     margin: 0px;
+}
+
+.zara-logo {
     filter: invert(1);
 }
 
@@ -97,7 +148,7 @@ body {
     font-weight: 700;
     opacity: 100%;
     width: 10rem;
-    font-size: 17px;
+    font-size: var(--fsz-lrg);
     text-transform: uppercase;
     border: transparent;
     border-bottom: 1px solid white;
@@ -137,16 +188,20 @@ body {
 }
 
 .icon span {
-    font-size: 12px;
+    font-size: var(--fsz-std);
     letter-spacing: 0.2px;
 }
 
 /* MAIN */
 
-main img {
-    padding: 0px;
-    margin: 0px;
+main img,
+video {
     width: 100vw;
+    height: 100%;
+}
+
+main img {
+    padding-bottom: 5px;
 }
 
 .scrollspy {
@@ -164,13 +219,12 @@ main img {
     text-transform: uppercase;
 }
 
-
 footer {
     padding-top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     text-align: center;
     width: 100vw;
     max-height: 100vh;
@@ -180,39 +234,29 @@ footer {
 }
 
 .footer-1 {
-    display: block;
-    position: relative;
     height: 100px;
+    padding: 150px 100px 100px 100px;
+}
+
+.footer-1 label {
+    font-size: var(--fsz-std);
 }
 
 .footer-1 input {
-    padding: 10px;
-    letter-spacing: .02rem;
-    font-weight: 700;
-    opacity: 70%;
-    width: 25rem;
-    font-size: 11px;
-    text-transform: uppercase;
     border: transparent;
     border-bottom: 1px solid black;
-    background-color: transparent;
-    user-select: none;
-    text-align: center;
-}
-
-.footer-1 input:focus {
-    outline: none;
+    border-radius: 0px;
 }
 
 .footer-2 {
+    padding-top: 100px;
     position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly
-    
+    justify-content: space-evenly;
 }
 
-.footer-2 a{
+.footer-2 a {
     padding: 0px;
     color: black;
     text-decoration: none;
@@ -234,14 +278,13 @@ footer {
 }
 
 .footer-2 svg {
-    height: 35px;
+    height: 20px;
     margin: 10px 7px 66px 10px
 }
 
 .footer-2 p {
-    font-size: 11px;
+    font-size: var(--fsz-sm);
     text-transform: uppercase;
-    letter-spacing: inherit;
 }
 
 .footer-2 img {
@@ -252,15 +295,21 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    padding-top: 100px;
 }
 
-.footer-3 a{
+.footer-links {
+    padding: 10px;
+    text-align: center;
+}
+
+.footer-3 a {
     display: block;
     text-decoration: none;
     color: black;
     text-transform: uppercase;
-    font-size: 11px;
-    padding-bottom: 5px;
+    font-size: var(--fsz-std);
+    padding: 5px;
 }
 
 .footer-3 a:hover {
@@ -268,11 +317,29 @@ footer {
 }
 
 .footer-3 h4 {
+    text-align: center;
+    font-size: smaller;
     margin: 10px;
+    padding: 0px;
     text-transform: uppercase;
     text-decoration: underline;
 }
 
 .footer-links {
     width: 35%;
+}
+
+.footer-4 {
+    padding: 100px 100px 250px 100px;
+}
+
+.footer-4 a {
+    font-size: var(--fsz-sm);
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+
+.footer-4 a:hover {
+    opacity: 50%;
 }
